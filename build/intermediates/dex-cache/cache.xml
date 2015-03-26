@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\13.0\381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7\guava-jdk5-13.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\guava-jdk5-13.0-56ff45f65258d305cda7e9f3c98ceb5bd29c868f.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.19.0\81dbf9795d387d5e80e55346582d5f2fb81a42eb\google-http-client-jackson2-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="81dbf9795d387d5e80e55346582d5f2fb81a42eb">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-http-client-jackson2-1.19.0-fdcdbf3ae6858b01e2182b09a61f85fb8d15c19a.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.19.0\6a21277d9bebe267b7ddee028b241eebc756c040\google-api-client-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="6a21277d9bebe267b7ddee028b241eebc756c040">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-api-client-1.19.0-540dd79d6c1ff83a4889d638f05bd3858a478b7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.19.0\ba2aafb867f6af469f936ae76426cf0a280094bd\google-api-client-android-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="ba2aafb867f6af469f936ae76426cf0a280094bd">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-api-client-android-1.19.0-8d3f2223adc770518e9546905b86d5fdd7b2f9ad.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-98f4765068d3bdd2cf00aba773721fbf49a6a53e.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.19.0\e3f11020c2c812112803d252d1392872d3f619c8\google-http-client-android-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e3f11020c2c812112803d252d1392872d3f619c8">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-http-client-android-1.19.0-3e7fb45189bb61219ae74f2eaa19df16c5bc017e.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-e95dddd9c0a9e9cadf64ded33652aa874c6da097.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-0113f5836647372476007ab293dbfe2908068378.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-9b1a056eff93de228c13be9cfa207e8c2567bda0.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-4e6303deaec318ecb5d8bc60c2a751c0be33095e.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-f31bb78e51906374608dba6be405c721c07fc61f.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.19.0\cdca49ad0977c040f603478aa2e16b2775c8fec6\google-http-client-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="cdca49ad0977c040f603478aa2e16b2775c8fec6">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-http-client-1.19.0-bc31d51add5646ee0061420ec5575a6a184aec09.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-8fd02cdfca1b12631502f7937066554f97c7cad7.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\gson-2.1-a4d8b1d12adaf3e8b625150b0ac01f6d2762088f.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-8fa2fc7aab3656153d83b4b9a3ea053dcb68b905.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-faf05bf3bd67f8e048f2dc622ecb0e0d679ea0fa.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-68e3c858f94f84ed5d2e6872964c14c8da0128ae.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-c4b09c3f76a4de5724b6fd98bc5512d5b395027c.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.18.0-rc\82647ac9ebf591b4517f8863ed4c84367cde0728\google-http-client-gson-1.18.0-rc.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="82647ac9ebf591b4517f8863ed4c84367cde0728">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-http-client-gson-1.18.0-rc-f80c57e0cc03f4f251e7c5bddc429c0fa6148709.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-cb70110d05c0abde263ca81843553e2e78cb26c1.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-30d6757db4b8b950c8e3d6a9c0362355de65c573.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-46b3c5644cce649847cf4bc73c0918ed5a73adfa.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-f791496a95fb73fff00ad28375faf86941891b9b.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-24afb7dfc6de42253978b7a7890a6e1e10f085f0.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-dd602c39ae49063b7b65cb75b1bf7fbb7c55857d.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-64a410d1814111d8abe6b6cc113146840cb74b71.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-ea569ab16eb518a7232eea3e448d47aa15db0203.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-72c7be7df864e5c7f688496f057f454fc6d1e93b.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-f31fc9014c7077d6feeedf31eabaf7cc1bbf9212.jar" />
+    </item>
+    <item
+        jar="C:\Users\chkim\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.19.0\d473a8962e14a707a3716637e4898bb2dd9643f2\google-oauth-client-1.19.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="d473a8962e14a707a3716637e4898bb2dd9643f2">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.19.0-374a6511f09e9944314d43c0d7681825eb45d85f.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\backend\build\libs\backend-android-endpoints.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="5814e69f756441b50baadbe80d3713d709c41797">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\backend-android-endpoints-e201498c13c887b303814d6984a08b59985f1d2f.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-7bb490204af813ed220d0e7777adc2e30d8917f9.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-47d21e8e0ebb1fd8babefb807cdb8a26082af659.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\classes-ec6698f67f2f7819b5b61b2e95e3760fb8da5a75.jar" />
+    </item>
+    <item
+        jar="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Works\solutions-cloud-adventure-sample-android-client-master1\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-fe62f31ffbe3aa0a6d4e2a645426ec562df3722a.jar" />
+    </item>
+
+</items>
