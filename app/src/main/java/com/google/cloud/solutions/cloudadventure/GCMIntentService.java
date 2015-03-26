@@ -16,6 +16,7 @@
 
 package com.google.cloud.solutions.cloudadventure;
 
+import android.app.IntentService;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -24,7 +25,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.appspot.myapp.cloudadventure.Cloudadventure;
@@ -36,7 +36,6 @@ import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.cloud.solutions.cloudadventure.util.CloudEndpointUtils;
-import com.google.cloud.solutions.cloudadventure.util.Constants;
 
 import java.io.IOException;
 
@@ -49,11 +48,13 @@ import java.io.IOException;
  */
 
 
-public class GCMIntentService extends GoogleCloudMessaging {
+public class GCMIntentService extends IntentService {
 
   private final Cloudadventure endpoint;
   private static final String SENDER_ID = "1092332425958";
   private static String userHandleString;
+   public static final int NOTIFICATION_ID = 1;
+    private NotificationManager mNotificationManager;
 
   /*
    * NOTE on the following constants: any updates to these will also need to be mirrored in
@@ -81,6 +82,7 @@ public class GCMIntentService extends GoogleCloudMessaging {
   public static final String BROADCAST_ON_MESSAGE_PLAYER_JOIN = "on-message-join-event";
   public static final String BROADCAST_ON_MESSAGE_PLAYER_LEAVE = "on-message-leave-event";
   public static final String BROADCAST_ON_MESSAGE_PLAYER_END_STATS = "on-message-stats-event";
+
 
   /**
    * Register the device for GCM.
@@ -128,7 +130,7 @@ public class GCMIntentService extends GoogleCloudMessaging {
   }
 
   public GCMIntentService() {
-    super();
+    super("GcmIntentServie");
     Cloudadventure.Builder endpointBuilder = new Cloudadventure.Builder(AndroidHttp.newCompatibleTransport(),
         new JacksonFactory(), new HttpRequestInitializer() {
           public void initialize(HttpRequest httpRequest) {
@@ -151,60 +153,69 @@ public class GCMIntentService extends GoogleCloudMessaging {
    * Called when a cloud message has been received.
    */
 @Override
-  public void onHandleIntent()( Intent intent) {
-        Bundle extras = intent.getExtras();
-        GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this.);
+  public void onHandleIntent(Intent intent) {
+    Bundle extras = intent.getExtras();
+    GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
 
-    if (PING_REASON_FRIEND_INVITE.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for friend invite.");
-      Intent resultIntent = new Intent(context, ProfileActivity.class);
-      resultIntent.putExtras(intent);
-      generateNotification(context, resultIntent, ProfileActivity.class);
-    } else if (PING_REASON_FRIEND_ACCEPT.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for friend acceptance.");
-      Intent resultIntent = new Intent(context, ProfileActivity.class);
-      resultIntent.putExtras(intent);
-      generateNotification(context, resultIntent, ProfileActivity.class);
-    } else if (PING_REASON_GAME_INVITE.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game invite.");
-      Intent resultIntent = new Intent(context, GameActivity.class);
-      resultIntent.putExtras(intent);
-      resultIntent.putExtra(
-          Constants.GAME_ENTRANCE_ACTION_INTENT_EXTRA_KEY,
-          Constants.GAME_ENTRANCE_ACTION_NOTIFICATION);
-      generateNotification(context, resultIntent, GameActivity.class);
-    } else if (PING_REASON_GAME_STARTED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game start.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_START);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
-    } else if (PING_REASON_GAME_DESTROYED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game destroy.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_DESTROY);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
-    } else if (PING_REASON_GAME_ENDED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game end.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_END);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
-    } else if (PING_REASON_PLAYER_JOINED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game join.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_JOIN);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
-    } else if (PING_REASON_PLAYER_LEFT.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for game leave.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_LEAVE);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
-    } else if (PING_REASON_PLAYER_END_STATS.equals(
-        intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
-      Log.i("GCMIntentService", "Received ping for player end stats.");
-      Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_END_STATS);
-      messageIntent.putExtras(intent);
-      LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+    String messageType = gcm.getMessageType(intent);
+
+    if( !extras.isEmpty()) {
+
+        Log.i("GCMIntentService", "Received Msg Type:" + messageType);
+        Log.i("GCMIntentService", "Received Msg : " + extras.toString());
+
+//        if (PING_REASON_FRIEND_INVITE.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for friend invite.");
+//            Intent resultIntent = new Intent(this, ProfileActivity.class);
+//            resultIntent.putExtras(intent);
+//            generateNotification(context, resultIntent, ProfileActivity.class);
+//        } else if (PING_REASON_FRIEND_ACCEPT.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for friend acceptance.");
+//            Intent resultIntent = new Intent(context, ProfileActivity.class);
+//            resultIntent.putExtras(intent);
+//            generateNotification(context, resultIntent, ProfileActivity.class);
+//        } else if (PING_REASON_GAME_INVITE.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game invite.");
+//            Intent resultIntent = new Intent(context, GameActivity.class);
+//            resultIntent.putExtras(intent);
+//            resultIntent.putExtra(
+//                    Constants.GAME_ENTRANCE_ACTION_INTENT_EXTRA_KEY,
+//                    Constants.GAME_ENTRANCE_ACTION_NOTIFICATION);
+//            generateNotification(context, resultIntent, GameActivity.class);
+//        } else if (PING_REASON_GAME_STARTED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game start.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_START);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        } else if (PING_REASON_GAME_DESTROYED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game destroy.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_DESTROY);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        } else if (PING_REASON_GAME_ENDED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game end.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_GAME_END);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        } else if (PING_REASON_PLAYER_JOINED.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game join.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_JOIN);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        } else if (PING_REASON_PLAYER_LEFT.equals(intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for game leave.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_LEAVE);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        } else if (PING_REASON_PLAYER_END_STATS.equals(
+//                intent.getStringExtra(GCM_PAYLOAD_PING_REASON))) {
+//            Log.i("GCMIntentService", "Received ping for player end stats.");
+//            Intent messageIntent = new Intent(BROADCAST_ON_MESSAGE_PLAYER_END_STATS);
+//            messageIntent.putExtras(intent);
+//            LocalBroadcastManager.getInstance(context).sendBroadcast(messageIntent);
+//        }
     }
+    GcmBroadcastReceiver.completeWakefulIntent(intent);
   }
 
   /**
